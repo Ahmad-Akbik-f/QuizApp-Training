@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  transition: 0.5s;
+  font-family: poppins;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  background-color: #11172f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 700px;
+  margin: auto;
+  background-color: #242a40;
+}
+@media (max-width: 767px) {
+  main {
+    width: auto;
+    min-height: 100%;
+    width: 100%;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .splash p {
+    font-size: 30px !important;
+    text-align: center;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2d4159;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.det {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #5d6275;
+}
+.det ul {
+  display: flex;
+  gap: 5px;
+}
+.det ul li {
+  width: 20px;
+  height: 20px;
+  background-color: #2d4159;
+  border-radius: 50%;
+}
+.det ul li.active {
+  background-color: #e78230;
+}
+.content {
+  padding: 20px;
+}
+.content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+.content ul li::before {
+  content: attr(data-alph);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e78230;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.content ul li {
+  border-radius: 50px;
+  padding: 20px;
+  background-color: #ccdde7;
+  color: #000;
+  padding-left: 80px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.content ul li.active::before {
+  background-color: #ccdde7;
+  color: #e78230;
+  left: calc(100% - 60px);
+}
+.content ul li.active {
+  font-weight: bold;
+  background-color: #e78230;
+  color: #fff;
+}
+.submit {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  background-color: #e78230;
+  cursor: pointer;
+}
+.submit:hover {
+  opacity: 0.8;
+}
+
+.splash {
+  padding: 20px;
+}
+.splash p {
+  color: #fff;
+  font-size: 50px;
+}
+
+.splash p span.perfect-res {
+  color: #ffd900;
+}
+.splash p span.good-res {
+  color: #09ff00;
+}
+.splash p span.bad-res {
+  color: #ff0000;
+}
